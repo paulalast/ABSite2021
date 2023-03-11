@@ -370,7 +370,7 @@ html {
 	left: 2em;
 	width: 50px;
 	height: 50px;
-	background-image: url("./dist/img/icon/scissors.png");
+	background-image: url("./../../dist/img/icon/scissors.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	transform: rotate(38deg);
@@ -385,7 +385,7 @@ html {
 	bottom: 2em;
 	width: 50px;
 	height: 50px;
-	background-image: url("./dist/img/icon/scissors.png");
+	background-image: url("./../../dist/img/icon/scissors.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	transform: rotate(230deg);
@@ -455,13 +455,13 @@ html {
 			transform: scale(1.2);
 		}
 		.img-one {
-			background-image: url("./dist/img/stuffA.jpeg");
+			background-image: url("./../../dist/img/stuffA.jpeg");
 		}
 		.img-two {
-			background-image: url("./dist/img/stuffB.jpeg");
+			background-image: url("./../../dist/img/stuffB.jpeg");
 		}
 		.img-three {
-			background-image: url("./dist/img/stuffC.jpeg");
+			background-image: url("./../../dist/img/stuffC.jpeg");
 		}
 	}
 	&__desktopbox {
@@ -791,7 +791,7 @@ footer {
 		left: 6em;
 		width: 250px;
 		height: 250px;
-		background-image: url("./dist/img/icon/scissors.png");
+		background-image: url("./../../dist/img/icon/scissors.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		transform: rotate(0deg);
@@ -809,7 +809,7 @@ footer {
 		bottom: 6em;
 		width: 200px;
 		height: 200px;
-		background-image: url("./dist/img/icon/scissors.png");
+		background-image: url("./../../dist/img/icon/scissors.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		transform: rotate(-180deg);
