@@ -1,6 +1,4 @@
 const { src, dest, series, parallel, watch } = require("gulp")
-// const sass = require("gulp-sass")
-// sass.compiler = require("node-sass")
 const sass = require("gulp-sass")(require("sass"))
 const cssnano = require("gulp-cssnano")
 const autoprefixer = require("gulp-autoprefixer")
@@ -11,7 +9,6 @@ const imagemin = require("gulp-imagemin")
 const sourcemaps = require("gulp-sourcemaps")
 const clean = require("gulp-clean")
 const kit = require("gulp-kit")
-
 const browserSync = require("browser-sync").create()
 const reload = browserSync.reload
 
@@ -19,7 +16,7 @@ const paths = {
 	html: "./html/**/*.kit",
 	sass: "./src/sass/**/*.scss",
 	js: "./src/js/**/*.js",
-	img: "./src/img/**/*",
+	img: "./src/img/*",
 	dist: "./dist",
 	sassDest: "./dist/css",
 	jsDest: "./dist/js",
@@ -48,10 +45,12 @@ function javaScript(done) {
 		.pipe(dest(paths.jsDest))
 	done()
 }
+
 function convertImages(done) {
 	src(paths.img).pipe(imagemin()).pipe(dest(paths.imgDest))
 	done()
 }
+
 function handleKits(done) {
 	src(paths.html).pipe(kit()).pipe(dest("./"))
 	done()
@@ -64,8 +63,11 @@ function cleanStuff(done) {
 
 function startBrowserSync(done) {
 	browserSync.init({
-		server: { baseDir: "./" },
+		server: {
+			baseDir: "./",
+		},
 	})
+
 	done()
 }
 
